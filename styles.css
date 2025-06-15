@@ -1,0 +1,45 @@
+body{
+    background-color: rgba(152, 92, 159, 0.433);
+    margin: auto;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+}
+
+ul{
+    list-style-type: circle;
+    border: 1px;
+    padding: auto;
+}
+
+li{
+    background-color: rgb(90, 132, 90);
+    margin: 15px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: blueviolet;
+}
+
+form{
+ display: flex;
+ flex-direction: column;
+ margin-top: 20px;   
+}
+
+input{
+    margin: 15px;
+    padding: 10px;
+}
+
+textarea{
+    margin: 15px;
+    padding: 10px;
+}
+
+button{
+    margin: 15px;
+    padding: 10px;
+}
