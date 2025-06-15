@@ -1,0 +1,6 @@
+const {v4: uuidv4} = require("uuid");
+let tasks= [];
+let groups= ["Work", "Home", "Personal", "Daily"];
+let users= [{id: 1, name: "Princess Leia"}]
+
+module.exports = {tasks, groups, users, uuidv4};
