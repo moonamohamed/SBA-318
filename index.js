@@ -12,9 +12,7 @@ app.use(express.static("public"));
 app.use(handleErr);
 
 
-app.get("/:reminder", (req, res) => {
-  res.send("Wake Up");
-});
+
 app.listen(port, () => {
   console.log("Server is running")
 });

@@ -3,4 +3,4 @@ let tasks= [];
 let groups= ["Work", "Home", "Personal", "Daily"];
 let users= [{id: 1, name: "Princess Leia"}]
 
-module.exports = {tasks, groups, users, uuidv4};
+module.export = {tasks, groups, users, uuidv4};
