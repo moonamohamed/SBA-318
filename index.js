@@ -6,6 +6,11 @@ const handleError = require("./middleware/handleErr");
 const taskValidation = require("./middleware/taskValidation")
 
 
+app.use("/tasks", taskRoutes);
+app.use(handleErr);
+
+app.use(express.json());
+app.use(express.static("public"));
 
 
 app.get("/:reminder", (req, res) => {
