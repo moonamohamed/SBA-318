@@ -8,7 +8,7 @@ const taskRoutes = require("./routes/taskRoutes");
 app.use("/tasks", taskRoutes);
 
 
-router.get("/task",(req, res) =>{
+router.get("/tasks",(req, res) =>{
     res.json(tasks);
 });
 
