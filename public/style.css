@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(215, 121, 212, 0.433) !important;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+ul{
+    list-style-type: circle;
+    border: 1px solid saddlebrown;
+    padding: 5px;
+}
+
+li{
+    background-color: rgb(90, 132, 90);
+    margin: 15px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px blueviolet;
+}

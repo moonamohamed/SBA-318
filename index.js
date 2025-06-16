@@ -8,8 +8,22 @@ const port = 3000;
 
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+
+const logger= (req, res, next) => {
+  console.log(`${req.method} request to ${req.url}`);
+  next();
+}
+
+const reqTime= (req, res,next) => {
+  req.reqTime= new Date();
+  next();
+};
+
+app.use(logger);
+app.use(reqTime);
 
 app.get("/", (req, res) => {
 res.send('RemindMe Please!');
@@ -67,6 +81,10 @@ app.delete("/api/tasks/:id", (req, res) =>{
   res.status(204).send();
 });
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({error: "uh-oh something's wrong!"});
+});
 
 app.listen(port, () => {
   console.log(`Server is running ${port}`)

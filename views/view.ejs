@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List</title>
-    <link rel="stylesheet" href="view.ejs">
+    <title>RemindMe Please</title>
+    <link rel="stylesheet" href="/style.css"/>
 </head>
-<body>
-    <div class="progress-bar" style="width: (completedTasks / totalTasks)*100"></div>
+<body style="background-color:  rgba(215, 121, 212, 0.433);">
 
     <h1>Task List</h1>
     <ul>
@@ -20,13 +19,13 @@
         </li> 
         <% }); %>
     </ul>
-    <!-- <h2>New Task</h2>
-    <form action="/tasks" method="POST">
-        <input type="text" name="Subject" placeholder="Task Subject" required><br>
+    <h2>New Task</h2>
+    <form action="/api/tasks" method="POST">
+        <input type="text" name="subject" placeholder="Task Subject" required><br>
         <textarea name="details" placeholder="Task Details" required></textarea><br>
-        <input type="text" name="Priority" placeholder="Priority (low, medium, high)" required><br>
-        <input type="text" name="Groups" placeholder="Groups (Work, Home, Personal, Daily)" required><br>
+        <input type="text" name="priority" placeholder="Priority (low, medium, high)" required><br>
+        <input type="text" name="groups" placeholder="Groups (Work, Home, Personal, Daily)" required><br>
         <button type="submit">New Task</button>
-    </form> -->
+    </form>
 </body>
 </html>
