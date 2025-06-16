@@ -15,7 +15,7 @@ router.get("/tasks",(req, res) =>{
 router.post('/:task', taskValidation, (req, res) =>{
     const{subject, details, priority, group} = req.body;
     const newTask= {
-        id: 1,
+        id: [],
         subject,
         details,
         priority,
