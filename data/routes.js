@@ -1,18 +1,21 @@
 const express= require("express");
 const router= express.Router();
-const {uuidv4} = require("./data")
 
 
-const taskValidation= require("../midleware.taskValidation");
+const taskValidation = require("./middleware/taskValidation.js")
+const taskRoutes = require("./routes/taskRoutes");
 
-router.get("/tasks",(req, res) =>{
+app.use("/tasks", taskRoutes);
+
+
+router.get("/task",(req, res) =>{
     res.json(tasks);
 });
 
-router.post('/:subject', taskValidation, (req, res) =>{
+router.post('/:task', taskValidation, (req, res) =>{
     const{subject, details, priority, group} = req.body;
     const newTask= {
-        id: uuidv4(),
+        id: 1,
         subject,
         details,
         priority,
@@ -32,14 +35,6 @@ router.patch("/:id", (req, res) =>{
 });
 
 router.delete("/:id", (req, res) =>{
-    tasks= tasks.filter(t => t.id !== taskId);
+   let  tasks= tasks.filter(t => t.id !== taskId);
     res.status(204).send();
 });
-
-module.export= router;
-module.export= function(req, res, next) {
-    if(!subject || !details || !priority || !group){
-        return res.status(400).send("All fields are required!")
-    }
-    next()
-}
