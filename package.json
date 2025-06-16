@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Create and use at least two pieces of custom middleware. 5%",
   "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "express": "^5.1.0",
+    "uuidv4": "^6.2.13"
   },
   "repository": {
     "type": "git",
